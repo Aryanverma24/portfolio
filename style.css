@@ -1,0 +1,753 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing : border-box;
+    
+}
+html {
+    scroll-behavior: smooth;
+  }
+header {
+    height : 55vh;
+    background-image : url("https://img.freepik.com/free-vector/creative-geometric-design-space_53876-89781.jpg");
+}
+
+.username h1{
+    position : absolute;
+    font-size : 5rem;
+    padding : 2rem 5rem;
+    margin-top : 5rem;
+    margin-left:2rem;
+    color : #191919;
+}
+.username h2{
+    position : absolute;
+    font-size : 5rem;
+    padding : 2rem 5rem;
+    margin-top : 5rem;
+    right : 2rem;
+    color : #191919;
+}
+
+nav{
+    padding-top : 1.5rem;
+}
+
+.nav-links{
+    display : flex;
+    justify-content : center;
+    padding : 0;
+}
+.nav-links li{
+    display : inline-block;
+    list-style : none;
+}
+.nav-links li a{
+    text-decoration : none;
+    cursor: pointer;
+    color:white;
+    margin-left :1rem;
+    font-size : 28px;
+}
+
+
+.social{
+    height: 8rem;
+   margin : 10px 30px;
+   display: flex;
+   justify-content : center;
+   align-items:center;
+   gap : 40px;
+}
+.social a{
+    text-decoration : none;
+    color:white;
+}
+.social a  i {
+    scale : 1.8;
+}
+.social a:hover {
+    color : gray;
+    box-shadow: 8px 3px 8px red;
+}
+
+.hero-image {
+    display: flex;
+    justify-content : center;
+}
+.hero-image img{
+    z-index : 5;
+    height: 200px;
+    width : 200px;
+    border-radius:50%;
+    box-shadow: 0 6px 10px black;
+    background-image : url("./image/portfolio.png")
+}
+
+
+/* main text container */
+
+.home-text-container{
+    margin-top: 7rem;
+    margin-left : 2rem;
+    font-size : 20px;
+    line-height : 2rem;
+    font-weight : 600;
+    padding : 8px;
+}
+
+.home-text-container span {
+    color : #eb456d;
+}
+
+/* about me */
+
+#about{
+    margin: 15px;  
+    padding : 5px 10px;
+    background-color : #efefef;
+    border-radius : 80px 8px 80px 8px ;
+}
+
+#about h1{
+    text-align : center;
+    font-size : 32px;
+    color: orange;
+    font-family: "Montserrat", sans-serif;
+}
+
+.about-container {
+    padding-top : 20px;
+    display:flex;
+    justify-content : space-evenly;
+}
+
+#about p {
+    width : 48%;
+    font-size : 20px;
+    font-weight : 600;
+    line-height : 1.8rem;
+}
+.about-container img{
+    width:400px;
+    height:250px;
+    border-radius : 18px;
+    margin-bottom : 2rem;
+}
+
+
+/* skills  */
+
+#skills{
+    margin:15px;
+    margin-top :2rem;
+    padding : 1rem;
+    background-color :#002244;
+    border-radius : 80px 8px 80px 8px ;
+    box-shadow : 0px 10px 20px gray;
+    color : white;
+}
+
+#skills h2{
+    text-align : center;
+    padding-top : 1rem;
+    margin-bottom : 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight : 700;
+    font-size : 32px;
+}
+#skills h2 span{
+    color : cyan;
+}
+
+#skills .container{
+    display : flex ;
+    justify-content : space-around ;
+    align-items : center;
+}
+
+#skills .container p{
+    font-size : 28px;
+    font-weight : 600;
+    text-align:center;
+    padding-left : 3rem;
+    text-decoration : underline;
+    text-underline-offset : 10px;
+}
+
+.skills {
+    margin: 40px;
+    width : 100%;
+  }
+  
+  .skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skills li {
+    margin-bottom: 10px;
+  }
+
+  .skill-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .skill-container span {
+    width: 100px; 
+  }
+    
+    .skills li span {
+    margin-right: 35px;
+    }
+    .skills span{
+        font-size : 18px;
+        font-weight : 600;
+    }
+
+  .progress-bar {
+    width: 100%;
+    height: 15px;
+    margin-top : 5px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    width: 0;
+    height: 100%;
+    background-color: cyan;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+  }
+  
+  .progress-bar[data-skill-level="60"] .progress {
+    animation: progress-bar-animation 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    width: 60%;
+  }
+  
+  .progress-bar[data-skill-level="90"] .progress {
+    animation: progress-bar-animation 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    width: 90%;
+  }
+  
+  .progress-bar[data-skill-level="70"] .progress {
+    animation: progress-bar-animation 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    width: 70%;
+  }
+
+  .progress-bar[data-skill-level="85"] .progress {
+    animation: progress-bar-animation 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    width: 85%;
+  }
+  
+  .progress-bar[data-skill-level="55"] .progress {
+    animation: progress-bar-animation 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    width: 55%;
+  }
+
+  .progress-bar[data-skill-level="75"] .progress {
+    animation: progress-bar-animation 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    width: 75%;
+  }
+  
+  
+  /* Animation */
+  @keyframes progress-bar-animation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: attr(data-skill-level);
+    }
+  }
+
+
+/* .circular progress bar */
+
+ .wrapper{
+    margin : 25px;
+    margin-right : 2px;
+    height : 200px;
+    width : 500px;
+    display: flex;
+    justify-content : space-between;
+    position : relative;
+}
+
+.outer{
+    height : 100%;
+    width : 100%;
+}
+
+.inner1 {
+    height : 120px;
+    width : 120px;
+    
+    border-radius : 50%;
+    padding: 10px;
+    box-shadow : -1px -1px 5px 0  rgb(8,8,8), 3px 3px 5px black;
+}
+.inner2 {
+    height : 100px;
+    width : 100px;
+    border-radius : 50%;
+    box-shadow : inset -1px -1px 5px 0  rgb(8,8,8),inset  3px 3px 5px black;
+    display:flex;
+    justify-content : center ;
+    align-items : center;
+}
+.number {
+    font-size : 1.5rem;
+    font-weight :400;
+    color : lightyellow;
+}
+
+.first circle{
+    animation : anim1 2s linear forwards;
+}
+@keyframes anim1{
+    100%{
+        stroke-dashoffset : 257.5;
+    }
+}
+.first{
+    position : absolute ;
+    top :0;
+    left: 0;
+}
+
+.second{
+    position : absolute ;
+    top :0;
+    left: 168px;
+}
+.third{
+    position : absolute ;
+    top :0;
+    left: 334px;
+}
+
+
+.second circle{
+    animation : anim2 2s linear forwards;
+}
+@keyframes anim2{
+    100%{
+        stroke-dashoffset : 157.5;
+    }
+}
+
+.third circle{
+    animation : anim3 2s linear forwards;
+}
+@keyframes anim3{
+    100%{
+        stroke-dashoffset : 207.5;
+    }
+}
+
+.outer h3{
+    margin: 1rem 0 1rem 0;
+    padding-top: 1rem;
+    font-size : 20px;
+}
+.outer .h3-1,
+.outer .h3-3
+{
+    margin-left : 1.2rem;
+}
+
+
+
+/* projects */
+
+#projects {
+    margin: 15px;  
+    margin-top : 2rem;
+    padding : 5px 10px;
+    background-color : #e8ecf1;
+    border-radius : 80px 8px 80px 8px ;
+}
+
+#projects h2 {
+    text-align : center;
+    color : #002244;
+    font-size : 1.9rem;
+    font-family: "Montserrat", sans-serif;
+    padding-top : 1rem;
+}
+
+#projects .container{
+    margin : 1rem 2rem;
+    display : flex;
+    justify-content : space-around;
+}
+
+.left-container{
+    margin  : 1rem;
+    width : 45%;
+}
+
+.right-container{
+    margin  : 1rem;
+    width : 45%;
+}
+
+.card{
+   margin-bottom : 12rem;
+   background-color : #a2a8d3;
+   border-radius : 2rem;
+   padding-bottom : 1rem;
+}
+.image-container{
+    padding-top : 1rem;
+    display : flex ;
+    justify-content : center;
+}
+
+.card img{
+    width : 380px ;
+    height : 230px;
+    border-radius : 15px;
+    border  : 1px solid #0d2d2d;
+}
+
+.card-text {
+    margin-top : 0.5rem;
+}
+
+.card-text .card-title {
+    text-align : center ;
+    padding : 4px 1rem;
+    font-size:  26px;
+    font-weight : 600;
+    color : #002244;
+}
+
+.project-details , .technologies{
+    padding : 0.5rem 1rem;
+    font-size : 18px;
+    line-height : 1;
+}
+
+.project-details span{
+    color : #005691;
+    font-weight : 700;
+}
+
+.tech-wrapper{
+    display : flex;
+    align-items : center;
+}
+
+.tech-wrapper .technologies{
+    font-weight : 800;
+    font-size : 18px;
+    display: inline-block;
+}
+  
+  .tech-wrapper .list ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tech-wrapper .list li {
+    margin-right: 10px;
+    color : #005691;
+    font-weight : 800;
+  }
+
+
+  .card a{
+    text-decoration : none;
+    color : white ;
+    font-size : 1.1rem;
+    display : flex;
+    justify-content: center;
+  }
+
+  .card .btn-text{
+    padding: 4px 0px 4px 12px; 
+    margin : 0px;
+    margin-top : 4px;
+    background-color : black;
+    width : 35%;
+    border-radius : 12px;
+  }
+
+.card .btn-text:hover{
+    background-image : linear-gradient(45deg,red,blue);
+}
+
+
+.right-container .card{
+    margin-top : 30rem;
+}
+
+
+.aeroplane {
+    margin : 2rem 0 2rem 0;
+    min-height : 100vh;
+    border-left : 3px solid black;
+    position: relative;
+}
+.aeroplane i {
+    position : sticky;
+    margin-left : -10px;
+    top : 350px;
+    scale : 2.5;
+    transform : rotate(90deg);
+}
+
+/* experiences */
+
+#experience {
+    margin: 15px;  
+    margin-top : 2rem;
+    padding : 5px 10px;
+    border-radius : 80px 8px 80px 8px;
+    background-color: #e8ecff;
+    opacity: 0.8;
+}
+
+#experience h2{
+   text-align : center;
+   font-size : 28px;
+   padding-top : 1rem;
+   font-family: "Montserrat", sans-serif;
+    color : #002871;
+    text-decoration : underline 4px;
+    text-underline-offset : 10px;
+    padding-bottom : 2rem;
+}
+
+
+.wrappers{
+    display: flex;
+    justify-content : space-around;
+    padding : 0.5rem 2rem;
+}
+
+.cards{
+    background-color : #a2a8d3;
+    margin : 1rem;
+    border-radius : 1.2rem;
+}
+.cards:hover{
+    background-color  : teal;
+}
+
+.cards .card-title{
+    text-align : center;
+    font-size:  20px;
+    font-weight : 600;
+    padding-top : 0.5rem;
+}
+.cards .text-container{
+    font-size : 18px;
+    font-weight: 500;
+    padding: 6px 8px;
+    margin-bottom : 1rem;
+}
+
+.head-container {
+    display : flex;
+    justify-content : space-between;
+    padding: 2px 8px;
+    margin-bottom : 0.5rem;
+}
+
+.cards .year{
+    text-align : right;
+    font-size : 16px;
+    margin-bottom : 4px;
+}
+
+
+
+/* certificates  */
+
+#certificate {
+    margin: 15px;  
+    margin-top : 2rem;
+    padding : 5px 10px;
+    padding-bottom : 2rem;
+    border-radius : 80px 8px 80px 8px;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+}
+
+#certificate h2{
+    text-align : center;
+    font-size : 28px;
+    padding-top : 1rem;
+    font-family: "Montserrat", sans-serif;
+    color : #002871;
+    text-decoration : underline 4px;
+    text-underline-offset : 10px;
+}
+
+#certificate .container {
+    display : flex;
+    justify-content : space-evenly;
+    margin-top : 2rem;
+}
+
+
+.car {
+    margin : 2rem 0 2rem 0;
+    min-height : 100vh;
+    border-left : 3px solid black;
+    position: relative;
+}
+.car i {
+    position : sticky;
+    margin-left : -10px;
+    top : 350px;
+    scale : 2.5;
+   
+}
+
+/* contact us  */
+
+
+#contact {
+    margin: 15px;  
+    margin-top : 2rem;
+    padding : 5px 10px;
+    border-radius : 80px 8px 80px 8px;
+    background-image : linear-gradient(180deg , #74b49b,#a7d7c5);
+    opacity: 0.7;
+}
+
+.heading {
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    gap : 1rem;
+}
+
+.heading i {
+    font-size : 2rem;
+    color : #233142;
+}
+
+#contact h2{
+   text-align : center;
+   margin-top : 1rem;
+   font-size : 28px;
+   padding-top : 1rem;
+   font-family: "Montserrat", sans-serif;
+    color : #233142;
+    text-decoration : underline 4px;
+    text-underline-offset : 10px;
+    padding-bottom : 2rem;
+}
+
+#contact .content{
+    display : flex;
+    width : 90%;
+}
+
+#contact .form-container {
+    margin-top : 4rem;
+    width : 80rem;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+.element {
+    margin-top : 0.5rem;
+    margin-bottom : 0.5rem;
+}
+
+label{
+    color :#233142;
+    font-size : 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight : 800;
+}
+label:hover{
+    color : indigo;
+}
+
+input , textarea{
+    margin-left : 3rem;
+    margin-top : 1rem;
+    padding : 3px 8px;
+    border-radius : 5px;
+    outline : none;
+    border : none;
+    font-size : 18px;
+    color : black;
+    font-family: "Montserrat", sans-serif;
+    box-shadow : 3px 5px 5px black;
+}
+textarea{
+    margin-left : 1rem;
+    margin-top : 1rem;
+    max-width: 400px; /* Replace 500px with your desired maximum width */
+    min-width: 200px;
+}
+
+button{
+    padding: 2px 6px;
+    margin-top : 1rem;
+    margin-left : 8rem;
+    color : green;
+    border-radius : 10px;
+    width : 25%;
+}
+
+.address-details {
+    width : 100%;
+    padding : 2px 5px;
+    margin : 2px;
+    margin-left : 0px;
+}
+.address-details p{
+    line-height : 1.4rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight : 600;
+}
+
+
+.address-details h3 {
+    font-size : 28px;
+    margin-top : 1rem;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom : 1rem;
+}
+
+.add-wrapper{
+    display : flex;
+    gap : 20px;
+}
+
+#contact  a i{
+    color : #233142;;
+}
+
+
+
+
